@@ -6,7 +6,7 @@ export default class Instructions extends Component {
     return (
       <View>
         <Text>
-            This is the instructions component.  It shows how stuff happens. 
+            This app allows you to send or take back greetings to the world! And keeps track of that for you.  
         </Text>
       </View>
     )

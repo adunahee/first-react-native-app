@@ -6,8 +6,18 @@ import Instructions from './components/Instructions.js';
 export default class App extends React.Component {
   constructor(){
     super();
-
+    this.state = {
+      number: 0,
+    }
   }
+
+  handleGreeting = (event) => {
+    this.setState({
+      number: this.state.number ++
+    })
+  }
+
+
   render() {
     return (
       <View>
@@ -18,6 +28,11 @@ export default class App extends React.Component {
             <Text>I am practicing so that I can make a utilitarian app for managing a kitchen.</Text>
         </View>
         <Instructions />
+        <View>
+          <Text>
+            You have greeted the world {this.state.number}.
+          </Text>
+        </View>
       </View>
 
     );
