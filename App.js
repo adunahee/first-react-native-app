@@ -1,24 +1,24 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import Header from './components/Header.js';
+import Instructions from './components/Instructions.js';
 
 export default class App extends React.Component {
+  constructor(){
+    super();
+
+  }
   render() {
     return (
-      <ScrollView style={styles.scrollView}>
-      <Header />
+      <View>
+        <Header />
         <View style={styles.container}>
-          <View style={{backgroundColor: 'skyblue', flexDirection: 'row'}}>
-            <Text>Hello World!</Text>
-          </View>
-          <View>
+            <Text style={{ backgroundColor: 'skyblue', flexDirection: 'row' }}>Hello World!</Text>
             <Text>My name is Anthony.</Text>
-          </View>
-          <View>
             <Text>I am practicing so that I can make a utilitarian app for managing a kitchen.</Text>
-          </View>
         </View>
-      </ScrollView>
+        <Instructions />
+      </View>
 
     );
   }
@@ -31,7 +31,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-between',
   },
-  scrollView: {
-    backgroundColor: 'green',
-  }
 });

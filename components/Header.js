@@ -6,14 +6,13 @@ export default class Header extends Component {
         const worldImg = require('../images/earth.jpeg');
         return (
             <View style={styles.header}>
+                <Text>First React App</Text>
                 <Image source={worldImg}
                     style={{
                         flex: 1,
-                        alignSelf: 'stretch',
-                    }}
-                    resizeMode="center">
+                        alignSelf: 'center',
+                    }}>
                 </Image>
-                <Text>First React App</Text>
             </View>
         )
     }
@@ -23,5 +22,6 @@ const styles = {
     header: {
         marginTop: 30,
         flexDirection: 'row',
+        alignItems: 'center',
     }
 }
